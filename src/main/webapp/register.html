@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-pink-600 to-purple-600 min-h-screen flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-lg p-10 w-full max-w-2xl">
+    <h2 class="text-3xl font-bold mb-6 text-center text-pink-600">Event Registration Form</h2>
+    
+    <!-- Confirmation Message -->
+    <div id="confirmation" class="hidden text-green-600 font-semibold text-center mb-4">
+      ✅ Registration successful! Redirecting to thank you page...
+    </div>
+
+    <form id="registrationForm" action="registeraction.jsp" method="POST" class="space-y-4">
+      
+      <div>
+        <label class="block text-gray-700 font-semibold">Full Name</label>
+        <input type="text" name="name" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold">College Name</label>
+        <input type="text" name="college" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold">Department</label>
+        <select name="department" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+          <option value="" disabled selected>Select Department</option>
+          <option value="b.com">B.com General</option>
+          <option value="bsc">Bsc.Computer Science</option>
+          <option value="bca">Bca.Computer Application</option>
+          <option value="b.com">B.com Honours</option>
+          <option value="b.com">B.com Accounts & Finance</option>
+          <option value="vcom">Bsc.Visual Communication</option>
+          <option value="Msc">Msc.Computer Science</option>
+          <option value="Mca">Mca.Computer Application</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold">Year of Study</label>
+        <select name="year" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+          <option value="" disabled selected>Select Year</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold">Select Event</label>
+        <select name="event" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+          <option value="" disabled selected>Select an Event</option>
+          <option value="Cultural Fest">Cultural Fest: Rhythm & Beats</option>
+          <option value="Tech Expo">Tech Expo: CodeCraft 2025</option>
+          <option value="Workshop">Workshop: Web Dev 101</option>
+          <option value="Guest Lecture">Guest Lecture: AI in Healthcare</option>
+          <option value="Inter-college Fest">Inter-college Fest: Connextion 2025</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold">Phone Number</label>
+        <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-semibold">Email ID</label>
+        <input type="email" name="email" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="bg-pink-600 text-white px-6 py-2 rounded-lg hover:bg-pink-700 transition">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  
+</body>
+</html>
